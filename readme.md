@@ -15,5 +15,12 @@
 1. Lets migrate the tables @terminal ```php artisan migrate```
 1. Let's see our git status @terminal ```git status```
 1. Lets add the all changes to git @termnial ```git add .```
-1. Commit the changes in git, @terminal ```git commit -m "Created Models & Routes -a```
+1. Commit the changes in git, @terminal ```git commit -m "Migration created for Products & Reviews```
+1. Push it to remote git repository, @terminal ```git push```
+1. Create the Products Factory faker @database/factories/ProductFactory.php, follow inst [4]
+1. Create the Reviews Factory faker @database/factories/ReviewFactory.php, follow inst [5]
+1. Create the Products & Reviews seeds @database/seeds/DatabaseSeeder.php, follow inst [6]
+1. Now @terminal ```php artisan db:seed```
+1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "Migration created for Products & Reviews```
 1. Push it to remote git repository, @terminal ```git push```
