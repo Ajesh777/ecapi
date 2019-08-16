@@ -70,3 +70,9 @@
 1. Lets add the all changes to git @termnial ```git add .```
 1. Commit the changes in git, @terminal ```git commit -m "Product OAuth CRUD created"```
 1. Push it to remote git repository, @terminal ```git push```
+1. Lets Handle the API Exceptions:
+    1. @app/Exceptions create new file app/Exceptions/ExceptionTrait.php & follow inst [20]
+    1. @app/Exceptions create new file app/Exceptions/Handler.php & follow inst [21]
+1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "Api Exception Handled with Custom exceptions"```
+1. Push it to remote git repository, @terminal ```git push```
