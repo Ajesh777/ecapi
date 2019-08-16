@@ -4,17 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Model\Review;
 use Illuminate\Http\Request;
+// 12 Use Product Model:
+use App\Model\Product;
+// 12.0 Use ReviewResource collection:
+use App\Http\Resources\ReviewResource;
 
 class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * 12.1 @parms Product id
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Product $product)
     {
-        //
+        // 12.2 Get all the reviews for the Product:
+        return ReviewResource::collection($product->reviews);
     }
 
     /**
