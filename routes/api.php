@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// 1.1 Example of normal Routes:
+    //Route::Resource('/products', 'ProductController');
+
+// 1.2 Create the Product Api Routes:
+    Route::apiResource('/products', 'ProductController');
+
+// 1.3 Create Group Route for Product Review:
+    Route::group(['prefix'=>'products'], function(){
+        // 1.3.1 Create the Review Api Routes:
+            Route::apiResource('/{product}/reviews', 'ReviewController');
+    });
