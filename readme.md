@@ -59,5 +59,14 @@
     1. @terminal ```php artisan make:auth```
     1. Now test the OAuth feature using PostMan App.
 1. Lets add the all changes to git @termnial ```git add .```
-1. Commit the changes in git, @terminal ```git commit -m "Passport Installed & verified"``
+1. Commit the changes in git, @terminal ```git commit -m "Passport Installed & verified"```
+1. Push it to remote git repository, @terminal ```git push```
+1. Now will work on Product CRUD operation with Auth, 
+    1. @app/Http/Controllers/ProductControllers.php, follow inst [17]
+    1. @terminal ```php artisan make:request ProductRequest```
+    1. @app/Http/Requests/ProductRequest.php, follow inst [18]
+    1. @app/Http/Controllers/ProductControllers.php, follow inst [18]
+    1. @app/Model/Product.php, follow inst [19]
+1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "Product OAuth CRUD created"```
 1. Push it to remote git repository, @terminal ```git push```
