@@ -49,3 +49,15 @@
 1. Lets add the all changes to git @termnial ```git add .```
 1. Commit the changes in git, @terminal ```git commit -m "Review resource Api Transformed```
 1. Push it to remote git repository, @terminal ```git push```
+1. Now we will work with Passport for authentication, @terminal 
+    1. ```composer require laravel/passport```
+    1. ```php artisan migrate```
+    1. ```php artisan passport:install```
+    1. @app/User.php, follow inst [14]
+    1. @app/Providers/AuthServiceProvider.php, follow inst [15]
+    1. @config/auth.php, follow inst [16]
+    1. @terminal ```php artisan make:auth```
+    1. Now test the OAuth feature using PostMan App.
+1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "Passport Installed & verified"``
+1. Push it to remote git repository, @terminal ```git push```
