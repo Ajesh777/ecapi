@@ -22,5 +22,14 @@
 1. Create the Products & Reviews seeds @database/seeds/DatabaseSeeder.php, follow inst [6]
 1. Now @terminal ```php artisan db:seed```
 1. Lets add the all changes to git @termnial ```git add .```
-1. Commit the changes in git, @terminal ```git commit -m "Migration created for Products & Reviews```
+1. Commit the changes in git, @terminal ```git commit -m "Products & Reviews table are seeded```
+1. Push it to remote git repository, @terminal ```git push```
+1. Create Product Review Relationship, @app/Model/Product.php, follow inst [7]
+1. Create Review Product Relationship, @app/Model/Review.php, follow inst [8]
+1. Use tinker to evaluate the relationship, @terminal ```php artisan tinker```
+1. Now let us get Product with id 3, @terminal with tinker ```App\Model\Product::find(3)```
+1. Now let us get Product Reviews with id 3, @terminal with tinker ```App\Model\Product::find(3)->reviews```
+1. Now let us get 3rd Review's Product detail, @terminal with tinker ```App\Model\Review::find(3)->product```
+ 1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "Products & Reviews Relationship Created```
 1. Push it to remote git repository, @terminal ```git push```
