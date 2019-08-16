@@ -10,3 +10,10 @@
 1. Lets add the all changes to git @termnial ```git add .```
 1. Commit the changes in git, @terminal ```git commit -m "Created Models & Routes -a```
 1. Push it to remote git repository, @terminal ```git push```
+1. Create the Product table @database/migrations/..._products_table, follow inst [2]
+1. Create the Review table @database/migrations/..._reviews_table, follow inst [3]
+1. Lets migrate the tables @terminal ```php artisan migrate```
+1. Let's see our git status @terminal ```git status```
+1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "Created Models & Routes -a```
+1. Push it to remote git repository, @terminal ```git push```
