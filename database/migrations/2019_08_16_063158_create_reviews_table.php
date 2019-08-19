@@ -13,6 +13,7 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
@@ -21,8 +22,11 @@ class CreateReviewsTable extends Migration
                 $table->text('review');
                 $table->integer('star');
             // 3.2 Connect with product table:
-                $table->integer('product_id')->unsigned()->index();
-                $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+                $table->bigInteger('product_id')
+                      ->unsigned()->index();
+                $table->foreign('product_id')
+                      ->references('id')->on('products')
+                      ->onDelete('cascade');
         });
     }
 
@@ -33,6 +37,7 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('reviews');
     }
 }

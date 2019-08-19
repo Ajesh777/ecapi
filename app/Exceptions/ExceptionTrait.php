@@ -21,7 +21,7 @@
                     return $this->HttpResponse($e);
                 }
 
-                return parent::render($request, $exception);
+                return parent::render($request, $e);
             }
             // 20.3 Create ModelNotFoundException:
                 protected function isModel($e)

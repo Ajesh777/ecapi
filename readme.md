@@ -76,3 +76,19 @@
 1. Lets add the all changes to git @termnial ```git add .```
 1. Commit the changes in git, @terminal ```git commit -m "Api Exception Handled with Custom exceptions"```
 1. Push it to remote git repository, @terminal ```git push```
+1. Lets Authorise users to update Products 
+    1. @database/migrations/..._products_table, follow inst [22]
+    1. Clear db, @terminal ```php artisan migrate:refresh```
+    1. update User factory, @database/factories/UserFactory.php follow inst [23]
+    1. update Product factory, @database/factories/ProductFactory.php follow inst [24]
+    1. update seeder, @database/seeds/DatabaseSeeder.php follow inst [25]
+    1. Now @terminal php artisan db:seed
+    1. Verify the backend db.
+    1. @terminal php artisan make:exception ProductNotOfUser
+    1. @app/Exceptions/ProductNotOfUser.php follow inst [26]
+    1. Now @app/Http/Controllers/ProductController.php follow inst [27]
+    1. Now for OAuth, @terminal ```php artisan passport:install```
+1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "User Product Review Cascade & Exception Handled"```
+1. Push it to remote git repository, @terminal ```git push```
+    

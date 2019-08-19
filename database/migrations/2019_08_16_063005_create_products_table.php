@@ -13,6 +13,7 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
@@ -22,6 +23,12 @@ class CreateProductsTable extends Migration
                 $table->double('price');
                 $table->integer('stock');
                 $table->double('discount');
+            // 22.1 Connect the user table with Product:
+                $table->bigInteger('user_id')
+                      ->unsigned()->index();
+                $table->foreign('user_id')
+                      ->references('id')->on('users')
+                      ->onDelete('cascade');
         });
     }
 
@@ -32,6 +39,7 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('products');
     }
 }

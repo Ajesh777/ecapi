@@ -12,6 +12,9 @@ use App\Http\Resources\Product\ProductResource;
 use App\Http\Requests\ProductRequest;
 // 18.7 Use Symfony\Response:
 use Symfony\Component\HttpFoundation\Response;
+// 27.0 Use Exception created:
+use App\Exceptions\ProductNotOfUser;
+use Auth;
 
 class ProductController extends Controller
 {
@@ -108,6 +111,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        // 27.1 ProductUserCheck:
+            $this->ProductUserCheck($product);
+
         // 18.7 Test:
             //return $request->all();
 
@@ -132,6 +138,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        // 27.2 ProductUserCheck:
+            $this->ProductUserCheck($product);
+
         // 18.11 Test return:
             //return $product;
 
@@ -141,4 +150,12 @@ class ProductController extends Controller
         // 18.13 Return with success msg [201-HTTP_NO_CONTENT]:
         return response(null,Response::HTTP_NO_CONTENT);
     }
+
+    // 27.3 Function for ProductUserCheck:
+        public function ProductUserCheck($product)
+        {
+            if (Auth::id() !== $product->user_id) {
+                throw new ProductNotOfUser;
+            }
+        }
 }
