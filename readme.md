@@ -102,5 +102,6 @@
 1. Lets add the all changes to git @termnial ```git add .```
 1. Commit the changes in git, @terminal ```git commit -m "Created CRUD for Reviews of Product"```
 1. Push it to remote git repository, @terminal ```git push```
+--
 
-* Done with User, Product, Customer, Review Authenticated, Bcrypted & Handled Exception for API Standards.
+## Completed API for User, Product, Customer, Review Authenticated, Bcrypted & Handled Exception for API Standards. Thank you for your coperation & following this series.
