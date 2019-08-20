@@ -91,4 +91,14 @@
 1. Lets add the all changes to git @termnial ```git add .```
 1. Commit the changes in git, @terminal ```git commit -m "User Product Review Cascade & Exception Handled"```
 1. Push it to remote git repository, @terminal ```git push```
-    
+1. Now lets Create CRUD for Reviews of Product:
+    1. Create Request, @terminal ```php artisan make:request ReviewRequest```
+    1. Now @app/Http/Requests/ReviewRequest.php follown isnt [28]
+    1. @app/Http/Controllers/ReviewController.php follow inst [29]
+    1. @app/Model/Review.php follow inst [30]
+    1. Now Update Part, @app/Http/Resources/ReviewResource.php follow inst [31]
+    1. @app/Http/Controllers/ReviewController.php follow inst [32]
+    1. Now Delete Part, @app/Http/Controllers/ReviewController.php follow inst [33]
+1. Lets add the all changes to git @termnial ```git add .```
+1. Commit the changes in git, @terminal ```git commit -m "Created CRUD for Reviews of Product"```
+1. Push it to remote git repository, @terminal ```git push```

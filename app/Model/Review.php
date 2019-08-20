@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
+    // 30.1 Set the protected required fields:
+        protected $fillable = [
+            'star','customer','review'
+        ];
+
     // 8.2 Create Review Product Relationship:
         public function product()
         {
